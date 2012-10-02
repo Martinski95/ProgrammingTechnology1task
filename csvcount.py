@@ -2,7 +2,7 @@ sum = 0;
 
 file = open("zadachi.csv");
 for line in file:
-	num = line.split(",")[1];
+	num = line.split(",")[4];
 	if num.isnumeric():
 		sum += int(num);
  
