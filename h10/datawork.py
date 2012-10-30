@@ -409,9 +409,19 @@ def processHomeworks(studentID, studentClass, type, studentFile):
 			currNumber = parseNumber(val[2])
 			currName = parseName(val[3])
 			currEmail = parseEmail(val[4])
-						
+			
+			if(len(currName) < 2):
+				currName = 'Няма Име'
+			if(len(array[studentID].name) < 2):
+				array[studentID].name = 'Няма Име'
+			
+			currNameArr = currName.split()
+			studNameArr = array[studentID].name.split()
+			currNameArrSize = len(currNameArr)
+			studNameArrSize = len(studNameArr)
+			
 			if(homeworkID == 1):
-				if((array[studentID].classID == currClass and array[studentID].email == currEmail) or (array[studentID].classID == currClass and array[studentID].name == currName)):
+				if((array[studentID].classID == currClass and array[studentID].email == currEmail) or (array[studentID].classID == currClass and array[studentID].name == currName) or (currNameArr[0]) == studNameArr[0] and currNameArr[currNameArrSize - 1] == studNameArr[studNameArrSize - 1]):
 					array[studentID].homework_given_date = val[0]
 					array[studentID].homework_is_given_on_time = compareDates(array[studentID].homework_given_date, homeworkarr[homeworkID-1].deadline)
 					if(array[studentID].homework_is_given_on_time):
@@ -424,7 +434,7 @@ def processHomeworks(studentID, studentClass, type, studentFile):
 				else:
 					continue
 			elif(homeworkID == 2):
-				if((array[studentID].classID == currClass and array[studentID].email == currEmail) or (array[studentID].classID == currClass and array[studentID].name == currName)):
+				if((array[studentID].classID == currClass and array[studentID].email == currEmail) or (array[studentID].classID == currClass and array[studentID].name == currName) or (currNameArr[0]) == studNameArr[0] and currNameArr[currNameArrSize - 1] == studNameArr[studNameArrSize - 1]):
 					array[studentID].homework_given_date = val[0]
 					array[studentID].homework_is_given_on_time = compareDates(array[studentID].homework_given_date, homeworkarr[homeworkID-1].deadline)
 					if(array[studentID].homework_is_given_on_time):
@@ -437,7 +447,7 @@ def processHomeworks(studentID, studentClass, type, studentFile):
 				else:
 					continue
 			elif(homeworkID == 3):
-				if((array[studentID].classID == currClass and array[studentID].email == currEmail) or (array[studentID].classID == currClass and array[studentID].name == currName)):
+				if((array[studentID].classID == currClass and array[studentID].email == currEmail) or (array[studentID].classID == currClass and array[studentID].name == currName) or (currNameArr[0]) == studNameArr[0] and currNameArr[currNameArrSize - 1] == studNameArr[studNameArrSize - 1]):
 					array[studentID].homework_given_date = val[0]
 					array[studentID].homework_is_given_on_time = compareDates(array[studentID].homework_given_date, homeworkarr[homeworkID-1].deadline)
 					if(array[studentID].homework_is_given_on_time):
@@ -450,7 +460,7 @@ def processHomeworks(studentID, studentClass, type, studentFile):
 				else:
 					continue
 			elif(homeworkID == 4):
-				if((array[studentID].classID == currClass and array[studentID].email == currEmail) or (array[studentID].classID == currClass and array[studentID].name == currName)):
+				if((array[studentID].classID == currClass and array[studentID].email == currEmail) or (array[studentID].classID == currClass and array[studentID].name == currName) or (currNameArr[0]) == studNameArr[0] and currNameArr[currNameArrSize - 1] == studNameArr[studNameArrSize - 1]):
 					array[studentID].homework_given_date = val[0]
 					array[studentID].homework_is_given_on_time = compareDates(array[studentID].homework_given_date, homeworkarr[homeworkID-1].deadline)
 					if(array[studentID].homework_is_given_on_time):
@@ -463,7 +473,7 @@ def processHomeworks(studentID, studentClass, type, studentFile):
 				else:
 					continue
 			elif(homeworkID == 5):
-				if((array[studentID].classID == currClass and array[studentID].email == currEmail) or (array[studentID].classID == currClass and array[studentID].name == currName)):
+				if((array[studentID].classID == currClass and array[studentID].email == currEmail) or (array[studentID].classID == currClass and array[studentID].name == currName) or (currNameArr[0]) == studNameArr[0] and currNameArr[currNameArrSize - 1] == studNameArr[studNameArrSize - 1]):
 					array[studentID].homework_given_date = val[0]
 					array[studentID].homework_is_given_on_time = compareDates(array[studentID].homework_given_date, homeworkarr[homeworkID-1].deadline)
 					if(array[studentID].homework_is_given_on_time):
@@ -476,7 +486,7 @@ def processHomeworks(studentID, studentClass, type, studentFile):
 				else:
 					continue
 			elif(homeworkID == 6):
-				if((array[studentID].classID == currClass and array[studentID].email == currEmail) or (array[studentID].classID == currClass and array[studentID].name == currName)):
+				if((array[studentID].classID == currClass and array[studentID].email == currEmail) or (array[studentID].classID == currClass and array[studentID].name == currName) or (currNameArr[0]) == studNameArr[0] and currNameArr[currNameArrSize - 1] == studNameArr[studNameArrSize - 1]):
 					array[studentID].homework_given_date = val[0]
 					array[studentID].homework_is_given_on_time = compareDates(array[studentID].homework_given_date, homeworkarr[homeworkID-1].deadline)
 					if(array[studentID].homework_is_given_on_time):
@@ -489,7 +499,7 @@ def processHomeworks(studentID, studentClass, type, studentFile):
 				else:
 					continue
 			elif(homeworkID == 7):
-				if((array[studentID].classID == currClass and array[studentID].email == currEmail) or (array[studentID].classID == currClass and array[studentID].name == currName)):
+				if((array[studentID].classID == currClass and array[studentID].email == currEmail) or (array[studentID].classID == currClass and array[studentID].name == currName) or (currNameArr[0]) == studNameArr[0] and currNameArr[currNameArrSize - 1] == studNameArr[studNameArrSize - 1]):
 					array[studentID].homework_given_date = val[0]
 					array[studentID].homework_is_given_on_time = compareDates(array[studentID].homework_given_date, homeworkarr[homeworkID-1].deadline)
 					if(array[studentID].homework_is_given_on_time):
@@ -503,7 +513,7 @@ def processHomeworks(studentID, studentClass, type, studentFile):
 				else:
 					continue
 			elif(homeworkID == 8):
-				if((array[studentID].classID == currClass and array[studentID].email == currEmail) or (array[studentID].classID == currClass and array[studentID].name == currName)):
+				if((array[studentID].classID == currClass and array[studentID].email == currEmail) or (array[studentID].classID == currClass and array[studentID].name == currName) or ((currNameArr[0]) == studNameArr[0] and currNameArr[currNameArrSize - 1] == studNameArr[studNameArrSize - 1]) or (currName == array[studentID].name)):
 					array[studentID].homework_given_date = val[0]
 					array[studentID].homework_is_given_on_time = compareDates(array[studentID].homework_given_date, homeworkarr[homeworkID-1].deadline)
 					if(array[studentID].homework_is_given_on_time):
@@ -516,7 +526,7 @@ def processHomeworks(studentID, studentClass, type, studentFile):
 				else:
 					continue
 			elif(homeworkID == 9):
-				if((array[studentID].classID == currClass and array[studentID].email == currEmail) or (array[studentID].classID == currClass and array[studentID].name == currName)):
+				if((array[studentID].classID == currClass and array[studentID].email == currEmail) or (array[studentID].classID == currClass and array[studentID].name == currName) or (currNameArr[0]) == studNameArr[0] and currNameArr[currNameArrSize - 1] == studNameArr[studNameArrSize - 1]):
 					array[studentID].homework_given_date = val[0]
 					array[studentID].homework_is_given_on_time = compareDates(array[studentID].homework_given_date, homeworkarr[homeworkID-1].deadline)
 					if(array[studentID].homework_is_given_on_time):
