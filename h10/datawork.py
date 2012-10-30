@@ -267,7 +267,7 @@ def getBelt(student_class, student_number):
 	lineCount = sum(1 for line in file)
 	file.seek(0)
 	count = 0
-	belt = 'No Belt'
+	belt = 'white'
 	for line in file:
 		val = line.split(",")
 		if(parseClass(val[1]) == student_class and parseNumber(val[2]) == student_number ):
@@ -432,7 +432,7 @@ def processHomeworks(studentID, studentClass, type, studentFile):
 					else:
 						array[studentID].homework_is_given_on_time = "Не"
 					array[studentID].homework_link = val[5]
-					studentFile.write(str(homeworkID) + "," + homework[homeworkID-1] + "," + homeworkarr[homeworkID-1].deadline + "," + array[studentID].homework_given_date + "," + array[studentID].homework_is_given_on_time + "," + array[studentID].homework_link + "\n")
+					studentFile.write(str(homeworkID) + "," + homework[homeworkID-1] + "," + homeworkarr[homeworkID-1].deadline + "," + array[studentID].homework_given_date + "," + array[studentID].homework_is_given_on_time + "," + array[studentID].homework_link)
 					break
 				else:
 					continue
@@ -498,7 +498,7 @@ def processHomeworks(studentID, studentClass, type, studentFile):
 						array[studentID].homework_is_given_on_time = "Не"
 					array[studentID].homework_link1 = val[5]
 					array[studentID].homework_link2 = val[8]
-					studentFile.write(str(homeworkID) + "," + homework[homeworkID-1] + "," + homeworkarr[homeworkID-1].deadline + "," + array[studentID].homework_given_date + "," + array[studentID].homework_is_given_on_time + "," + array[studentID].homework_link1 + "," + array[studentID].homework_link2 + "\n")
+					studentFile.write(str(homeworkID) + "," + homework[homeworkID-1] + "," + homeworkarr[homeworkID-1].deadline + "," + array[studentID].homework_given_date + "," + array[studentID].homework_is_given_on_time + "," + array[studentID].homework_link1 + "," + array[studentID].homework_link2)
 					break
 				else:
 					continue
