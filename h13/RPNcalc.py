@@ -36,7 +36,7 @@ while(True):
 			elif(list[i] == "/"):
 				if(val1 == 0.0):
 					print("Division by zero!")
-					os.system("PAUSe")
+					os.system("PAUSE")
 					break
 				else:
 					res = val2 / val1
